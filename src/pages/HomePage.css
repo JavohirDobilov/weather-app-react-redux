@@ -1,0 +1,193 @@
+body{
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+}
+
+h1, h3{
+    font-weight: 400;
+}
+.logo-name{
+    color: white;
+}
+.weather-app{
+    position: relative;
+    min-height: 100vh;
+}
+
+.weather-shar{
+    padding: 140px 300px;
+}
+.container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2em 3em 4em 3em;
+}
+
+.container >div {
+    display: flex;
+    justify-content: center;
+
+}
+
+.city-name,
+.temp,
+.weather{
+    margin: 0.5em 1.5em;
+    color: white;
+}
+
+.city-time h1{
+    margin: 0;
+    margin-bottom: 0.2em;
+    font-size: 3em;
+    color: white;
+}
+.temp{
+    font-size: 7em;
+    margin: 0;
+    color: white;
+
+}
+
+.weather img{
+    display: block;
+    margin: 0.8em 0;
+}
+
+.panel{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    /*background: linear-gradient(#2b4d65,#68788c);*/
+    background: #2b4d65;
+    overflow-y: scroll;
+    padding: 3em 2em;
+}
+.panel::-webkit-scrollbar {
+    width: 7px;
+}
+.panel::-webkit-scrollbar-thumb {
+    background: #68788c;
+    border-radius: 5px;
+}
+.panel::-webkit-scrollbar-track {
+    background: transparent;
+}
+.panel form{
+    margin-bottom: 3em;
+}
+.submit{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.4em;
+    margin: 0;
+    border: none;
+    outline: none;
+    background: #86c1d5;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.4s;
+
+}
+.submit:hover{
+    background: #fff !important;
+    color: #000;
+}
+
+.search{
+    background: none;
+    border: none;
+    border-bottom: 1px #8295a4 solid;
+    padding: 0 1rem 0.5rem 0;
+    width: 80%;
+    color: #fff;
+    font-size: 1.1rem;
+}
+.search:focus{
+    outline: none;
+}
+.search::placeholder{
+    color: white;
+    font-size: 20px;
+    color: #68788c;
+
+}
+
+.panel ul{
+    padding: 0 0 1em 0;
+    margin: 2em 0;
+    border-bottom: 1px #8295a4 solid;
+}
+
+.panel ul li{
+    color: #8293af;
+    font-size: 18px;
+    margin: 2.5em 0;
+}
+
+.panel ul h4{
+    margin: 3em 0;
+}
+
+.city{
+    display: block;
+    cursor: pointer;
+}
+.city:hover{
+    color: #2c2c2c;
+}
+
+.details li{
+    display: flex;
+    justify-content: space-between;
+    color:#8293af ;
+}
+.details h4{
+    color: white;
+    font-size: 20px;
+}
+
+
+/*     Resonsive */
+
+@media screen and (max-width: 800px){
+    .weather-app{
+
+    }
+    .panel, .container{
+        position: relative;
+        width: 100%;
+        top: initial;
+    }
+    .weather-shar{
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    html{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-height: 300px){
+    .weather-app{
+        min-height: 48em;
+    }
+    .panel{
+        padding: 20px;
+    }
+}
